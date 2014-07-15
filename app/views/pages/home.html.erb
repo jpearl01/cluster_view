@@ -2,7 +2,16 @@
 	<h1>Welcome to the cluster view application!</h1>
 
 <%if user_signed_in? %>
-#do something
+	<div class="span8">
+		<% if current_user.projects.any? %>
+		<h3>Projects (<%= current_user.projects.count %>)</h3>
+		<ol class='projects'>
+			<%= render @projects %>
+		</ol>
+		<%= will_paginate @projects %>
+		<% end -%>
+	</div>
+	</div>
 <%else%>
 	<p>
 		<%= link_to "Login", new_user_session_path, class: "btn btn-default btn-lg" %>
