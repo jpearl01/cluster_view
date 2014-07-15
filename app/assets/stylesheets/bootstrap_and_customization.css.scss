@@ -1,0 +1,15 @@
+$body-bg:           #EFFBF2;
+$navbar-default-bg: #D8CEF6;
+$jumbotron-bg:      #F2F2F2;
+
+@import 'bootstrap';
+
+.center {
+
+	text-align: center;
+}
+
+.navbar-brand {
+
+	font-weight: bold;
+}
